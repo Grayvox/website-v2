@@ -19,6 +19,9 @@ const posts = (await getCollection('blog')).sort(
 			main {
 				width: 960px;
 			}
+			main h3 span {
+				text-shadow: 3px 3px 10px black;
+			}
 			ul, li {
 				margin-top: 0px;
 			}
@@ -42,29 +45,12 @@ const posts = (await getCollection('blog')).sort(
 			.bottom-img {
 				margin-left: 50rem;
 			}
-			.center-text {
-				text-align: center;
-			}
-			.post {
-				width: 100%;
-				margin: 5%;
-				padding: 1rem;
-				color: var(--text);
-				line-height: 1;
-				border: solid var(--blend-text) 1px;
-				background-color: var(--bg-dark);
-				border-radius: 10px;
-			}
-			.date {
-				font-size: 17px;
-				color: var(--blend-text);
-			}
 		</style>
 	</head>
 	<body>
 		<Header />
 		<main>
-			<h3 class="center-text">✍️ Writings ✍️</h3>
+			<h3 class="center-text">✍️ <span>Writings</span> ✍️</h3>
 			<section>
 				<img class="top-img" src="/LatestBlogPost.png" alt="Check out my latest blog post">
 				<ul>

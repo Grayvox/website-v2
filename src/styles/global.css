@@ -35,7 +35,8 @@
 	padding: 1rem;
 	color: var(--text);
 	line-height: 1;
-	border: solid var(--blend-text) 1px;
+	border: solid var(--blend-text) 3px;
+	box-shadow: 3px 3px 15px black;
 	background-color: var(--bg-dark);
 	border-radius: 10px;
 }
@@ -43,8 +44,9 @@
 	padding: 1rem;
 	color: var(--text);
 	line-height: 1;
-	border: solid var(--blend-text) 1px;
+	border: solid var(--blend-text) 3px;
 	background-color: var(--bg-dark);
+	box-shadow: 3px 3px 15px black;
 	border-radius: 10px;
 }
 .special-box code {
@@ -54,6 +56,9 @@
 .date {
 	font-size: 17px;
 	color: var(--blend-text);
+}
+.special-box ul {
+	list-style-type: none;
 }
 @font-face {
 	font-family: "Source Sans 3";
