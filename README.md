@@ -7,7 +7,6 @@ Powered by:
 - pnpm
 - Vite
 - Astro
-- Tailwind CSS
 
 ## 🧞 Commands
 
