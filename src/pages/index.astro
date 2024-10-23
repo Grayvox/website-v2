@@ -2,7 +2,7 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import { SITE_TITLE, SITE_DESCRIPTION, LINKS } from '../consts';
 ---
 
 <!doctype html>
@@ -45,7 +45,19 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 			<img src="/FourthOption.png" alt="I'm the fourth option">
 			<p>
 				I consider myself a person of many hats. More specifically, an individual incapable of actually focusing on one thing at a time.
-				Currently, I'm teaching myself computer science full time.
+				I hold many a role, mostly of minimal importance, but here they are anyway:
+			</p>
+			<p>
+				<code>💾 Self Taught Programmer</code>
+				<code>🌐 Web Dev</code>
+				<code>👾 Game Dev</code>
+				<br>
+				<code>💽 Systems Programming</code>
+				<code>🪶 Writer</code>
+				<code>🎨 Artist</code>
+				<code>🎥 <a href={LINKS.youtube} target="_blank" rel="noopener noreferrer">YouTube Person</a></code>
+				<code>🎙️ <a href={LINKS.twitch} target="_blank" rel="noopener noreferrer">Twitch Person</a></code>
+				<code>💙 VS Code btw</code>
 			</p>
 		</main>
 		<Footer />
