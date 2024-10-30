@@ -1,6 +1,6 @@
 ---
 title: 'The man with a million goals'
-description: 'The Man With A Million Goals, or How I Learned to Stop Worrying and Love the Chaos.'
+description: 'The Man With A Million Goals, or How I Learned to Keep Worrying and Love the Chaos.'
 pubDate: 'Sep 25 2024'
 ---
 
