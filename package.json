@@ -1,7 +1,7 @@
 {
-  "name": "squealing-solstice",
+  "name": "grays-little-corner",
   "type": "module",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -14,5 +14,9 @@
     "@astrojs/rss": "^4.0.7",
     "@astrojs/sitemap": "^3.1.6",
     "astro": "^4.12.2"
+  },
+  "engines": {
+    "node": ">=10",
+    "pnpm": ">=3"
   }
 }
