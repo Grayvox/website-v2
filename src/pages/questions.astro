@@ -2,7 +2,7 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION, FAQ } from '../consts';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
 const title = `A Brief Interrogation of ${SITE_TITLE}`
 ---
@@ -27,9 +27,15 @@ const title = `A Brief Interrogation of ${SITE_TITLE}`
 			ul li a {
 				display: block;
 			}
-			ul li a p {
+			ul li p {
+                line-height: 30px;
 				margin-bottom: 10px;
 			}
+            .inner-list li {
+                margin-top: 10px;
+                margin-bottom: 0px;
+                list-style-type: disc;
+            }
         </style>
     </head>
     <body>
@@ -37,14 +43,86 @@ const title = `A Brief Interrogation of ${SITE_TITLE}`
         <main>
             <ul>
                 <div class="special-box">
-                    {
-                        FAQ.map((entry) => (
+                    <h3 class="center-text">🗂️ <i>A Brief Interrogation of Grayvox</i> 🗂️</h3>
+                    <br>
+                    <li id="question-one">
+                        <h4>What's with the name?</h4>
+                        <p>
+                            I always wanted my username to involve 'Gray' or at least a wolf. After a ton of brainstorming, I came up with this.
+                        </p>
+                        <br>
+                        Other name ideas were:
+                        <ul class="inner-list">
+                            <li>HowlingGray</li>
+                            <li>SystemGray</li>
+                            <li>VoxelWolf</li>
+                            <li>GraySystems</li>
+                            <li>DevByGray</li>
+                        </ul>
+                        <br>
+                        Still hate that last one...
+                    </li>
+                    <li id="question-two">
+                        <h4>Why a wolf?</h4>
+                        <p>
+                            I could be cheesy and say it's because they're "misunderstood", but I like being original.
+                            Put simply, I love wolves. Beautiful, intelligent, a bit scary... and yes, misunderstood.
+                            Though I do have a lot in common with them; They're extremely social creatures (unlike me), 
+                            do well in packs (unlike me)... wait a minute-
+                        </p>
+                    </li>
+                    <li id="question-three">
+                        <h4>What sort of work do you do?</h4>
+                        <p>
+                            Yes.
+                        </p>
+                        <p>
+                            ...A lot of stuff, put simply. Whatever comes to mind, whatever I fancy at the time. 
+                            I code stuff, write stories, draw stuff, design games, produce ideas upon ideas upon ideas 
+                            upon... well, you get the idea.
+                        </p>
+                    </li>
+                    <li id="question-four">
+                        <h4>What sort of computer do you have?</h4>
+                        <p>
+                            I built it myself, and will probably continue to do that every single time I need a new 
+                            computer. If you're curious about the specs:
+                        </p>
+                        <br>
+                        <ul>
+                            <li><b>CPU:</b> Intel i7-13700K</li>
+                            <li><b>GPU:</b> GeForce RTX 3060 12GB</li>
+                            <li><b>RAM:</b> 32GB DDR5</li>
+                            <li><b>Hard Drive 1:</b> Samsung 990 EVO 1TB SSD</li>
+                            <li><b>Motherboard:</b> MSI Z790-A PRO MAX WIFI</li>
+                        </ul>
+                    </li>
+                    <li id="question-five">
+                        <h4>What software do you use?</h4>
+                        <p>
+                            I try a lot of different stuff honestly, meaning this is subject to change and I may or may not
+                            forget to update it enough:
+                        </p>
+                        <br>
+                        <ul>
                             <li>
-                                <h4>{entry[0]}</h4>
-                                <p>{entry[1]}</p>
+                                <b>OS:</b> Windows 11 with WSL (running Ubuntu)
                             </li>
-                        ))
-                    }
+                            <li>
+                                <b>Code Editor:</b> VS Code (for everything but Java) and IntelliJ IDEA (for Java and 
+                                JVM stuff)
+                            </li>
+                            <li><b>Game Engine:</b> Godot Engine</li>
+                            <li><b>Pixel Art and Animation:</b> Aseprite</li>
+                            <li><b>Sketching and General Art:</b> Krita</li>
+                            <li><b>3D Modeling:</b> Blender and Material Maker</li>
+                            <li><b>Recording and Streaming:</b> OBS Studio</li>
+                            <li><b>Video Editing:</b> DaVinci Resolve</li>
+                            <li><b>Photo Editing:</b> Figma (for thumbnail design), and GIMP (for photo editing)</li>
+                            <li><b>Workspace and Note Taking:</b> Notion</li>
+                            <li><b>To Do List:</b> TickTick</li>
+                        </ul>
+                    </li>
                 </div>
             </ul>
         </main>

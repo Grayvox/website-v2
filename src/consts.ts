@@ -11,7 +11,3 @@ export const LINKS = {
     kofi: 'https://www.ko-fi.com/grayvox',
     linktree: 'https://www.linktr.ee/grayvox',
 };
-
-export const FAQ = [
-    ['Who the heck are you?', "I don't know...\n\n\nBut I do a lot of things."]
-]
