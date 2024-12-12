@@ -1,0 +1,54 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION, FAQ } from '../consts';
+import Question from '../components/Question.astro'
+
+const title = `A Brief Interrogation of ${SITE_TITLE}`
+---
+
+<!doctype HTML>
+<html>
+    <head>
+        <BaseHead title={title} description={SITE_DESCRIPTION} />
+        <style>
+            main {
+				width: 960px;
+			}
+			main h3 span {
+				text-shadow: 3px 3px 10px black;
+			}
+            ul, li {
+				margin-top: 0px;
+			}
+			ul li {
+                list-style-type: none;
+			}
+			ul li a {
+				display: block;
+			}
+			ul li a p {
+				margin-bottom: 10px;
+			}
+        </style>
+    </head>
+    <body>
+        <Header />
+        <main>
+            <ul>
+                <div class="special-box">
+                    {
+                        FAQ.map((entry) => (
+                            <li>
+                                <Question question={entry[0]} answer={entry[1]} />
+                            </li>
+                        ))
+                    }
+                </div>
+            </ul>
+        </main>
+        <Footer />
+    </body>
+</html>
+

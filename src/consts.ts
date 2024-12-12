@@ -9,5 +9,9 @@ export const LINKS = {
     twitch: 'https://www.twitch.tv/grayvoxdev',
     github: 'https://www.github.com/Grayvox',
     kofi: 'https://www.ko-fi.com/grayvox',
-    linktree: 'https://www.linktr.ee/grayvox'
+    linktree: 'https://www.linktr.ee/grayvox',
 };
+
+export const FAQ = [
+    ['Who the heck are you?', "I don't know...\n\n\nBut I do a lot of things."]
+]
