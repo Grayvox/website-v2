@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/BlogPost.astro';
+import { LINKS } from '../consts';
 ---
 
 <Layout
@@ -9,6 +10,25 @@ import Layout from '../layouts/BlogPost.astro';
 	<p>
 		Home page wasn't enough for you? Honestly I'm glad you're here regardless, because SOMEONE has to read 
 		this or it was all for nothing. 😭
+	</p>
+	<p>
+		Anyway... greetings, wanderer of the interwebs. My name is Gray, short for Grayvox. 
+		That's not my real name of course, as I prefer some sense of privacy on the interwebs.
+	</p>
+	<p>
+		I'm currently working in retail, but am studying Computer Science and Game Development in the hopes of 
+		becoming a full time indie dev. Unfortunately, this title doesn't pay the bills well... so the retail job
+		helps me financially for now.
+	</p>
+	<p>
+		Most of my projects are freely accessible on my <a href={LINKS.github}>GitHub</a>, except for my games
+		which I prefer to keep private. I do have <a href=`${LINKS.github}/godot-fcc-game`>one game</a> publicly 
+		available though, which is the first one I
+		ever made with Godot.
+	</p>
+	<p>
+		Now onto the organized part! Below you'll find a list of the tech I've used, interests I have (fields of 
+		expertise?), and life achievements I've unlocked (somehow).
 	</p>
 	<p>
 		Naturally, we're going to divide this into multipoint lists and special boxes with super cool 
@@ -70,10 +90,13 @@ import Layout from '../layouts/BlogPost.astro';
 		<span class="mini-text">Some things I've done, somehow.</span>
 		<ul>
 			<li>
-				🎮 Completed 1 game jam with a game called <a href="https://grayvox.itch.io/noirdo" rel="noopener noreferrer">Noirdo</a>.
+				🎮 Competed in 1 game jam with a game called <a href="https://grayvox.itch.io/noirdo" rel="noopener noreferrer">Noirdo</a>.
 			</li>
 			<li>
-				📋 Created a <a href="https://github.com/Grayvox/rails-alternatives" rel="nopener noreferrer">simple repo</a> for alternatives to Ruby on Rails.
+				📋 Created a <a href=`${LINKS.github}/rails-alternatives` rel="nopener noreferrer">simple repo</a> for alternatives to Ruby on Rails.
+			</li>
+			<li>
+				🎰 Built a total of 3 different Discord Bots (Only 1 has a <a href=`${LINKS.github}/on-this-day-bot`>public repo</a> though).
 			</li>
 		</ul>
 	</div>
