@@ -1,107 +1,120 @@
 ---
-import Layout from '../layouts/BlogPost.astro';
-import { LINKS } from '../consts.ts';
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { SITE_TITLE, SITE_DESCRIPTION, LINKS } from '../consts.ts';
+
+const title = `About Me - ${SITE_TITLE}`
 ---
 
-<Layout
-	title="About Me"
-	description="Lorem ipsum dolor sit amet"
->
-	<p>
-		Home page wasn't enough for you? Honestly I'm glad you're here regardless, because SOMEONE has to read 
-		this or it was all for nothing. 😭
-	</p>
-	<p>
-		Anyway... greetings, wanderer of the interwebs. My name is Gray, short for Grayvox. 
-		That's not my real name of course, as I prefer some sense of privacy on the interwebs.
-	</p>
-	<p>
-		I'm currently working as a Developer at <a href="https://stable.dev" rel="noopener noreferrer">stable.dev</a>, a startup 
-		focused on giving developers the ability to just push their code to GitHub and have their bot up and running thanks to our easy
-		and effective hosting solutions.
-	</p>
-	<p>
-		Most of my projects are freely accessible on my <a href={LINKS.github} rel="noopener noreferrer">GitHub</a>, except for my games
-		which I prefer to keep private. I do have <a href=`${LINKS.github}/godot-fcc-game` rel="noopener noreferrer">one game</a> publicly 
-		available though, which is the first one I
-		ever made with Godot.
-	</p>
-	<p>
-		Now onto the organized part! Below you'll find a list of the tech I've used, interests I have (fields of 
-		expertise?), and life achievements I've unlocked (somehow).
-	</p>
-	<p>
-		Naturally, we're going to divide this into multipoint lists and special boxes with super cool 
-		<code>box-shadow</code> properties tied to them for as much dramatic effect as possible.
-	</p>
-	<p>
-		Ready, dear traveller? LET'S A GO! *Mario pipe noises*
-	</p>
-	<div class="special-box">
-		<h3>Technologies</h3>
-		<h5>Languages</h5>
-		<a href="https://developer.mozilla.org/en-US/docs/Web/HTML" rel="noopener noreferrer"><img src="https://skillicons.dev/icons?i=html" /></a>
-		<a href="https://developer.mozilla.org/en-US/docs/Web/CSS" rel="noopener noreferrer"><img src="https://skillicons.dev/icons?i=css" /></a>
-		<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" rel="noopener noreferrer"><img src="https://skillicons.dev/icons?i=js" /></a>
-		<a href="https://typescriptlang.org" rel="noopener noreferrer"><img src="https://skillicons.dev/icons?i=ts" /></a>
-		<a href="https://ruby-lang.org" rel="noopener noreferrer"><img src="https://skillicons.dev/icons?i=ruby" /></a>
-		<a href="https://java.com" rel="noopener noreferrer"><img src="https://skillicons.dev/icons?i=java" /></a>
-		<a href="https://en.wikipedia.org/wiki/C_(programming_language)" rel="noopener noreferrer"><img src="https://skillicons.dev/icons?i=c" /></a>
-		<h5>Frontend</h5>
-		<a href="https://astro.build" rel="noopener noreferrer"><img src="https://skillicons.dev/icons?i=astro" /></a>
-		<a href="https://tailwindcss.com" rel="noopener noreferrer"><img src="https://skillicons.dev/icons?i=tailwind" /></a>
-		<a href="https://vite.dev" rel="noopener noreferrer"><img src="https://skillicons.dev/icons?i=vite" /></a>
-		<h5>Backend</h5>
-		<a href="https:/nodejs.org" rel="noopener noreferrer"><img src="https://skillicons.dev/icons?i=nodejs" /></a>
-		<a href="https://bun.sh" rel="noopener noreferrer"><img src="https://skillicons.dev/icons?i=bun" /></a>
-		<h5>Game Dev</h5>
-		<a href="https://godotengine.org" rel="noopener noreferrer"><img src="https://skillicons.dev/icons?i=godot" /></a>
-	</div>
-	<br>
-	<div class="special-box">
-		<h3>Interests</h3>
-		<span class="mini-text">(Outside of programming, that is.)</span>
-		<ul>
-			<li>
-				📽️ Film and TV (I have a few <i>minor</i> favorites)
-			</li>
-			<li>
-				🕹️ Video games (THE <b>LORE</b> CONSUMES ME)
-			</li>
-			<li>
-				🪶 Books (Reading, writing, smelling... I like the smell of books)
-			</li>
-			<li>
-				🎨 Art (Why can't reality have an undo tool)
-			</li>
-			<li>
-				💽 Hardware engineering (Oooh what does this button do-)
-			</li>
-			<li>
-				🏛️ Architecture (I yearn for the mines)
-			</li>
-			<li>
-				🪩 3D modeling (Look mom, I made a cube)
-			</li>
-			<li>
-				🎸 Guitar (...and music in general)
-			</li>
-		</ul>
-	</div>
-	<br>
-	<div class="special-box">
-		<h3>Achievements</h3>
-		<span class="mini-text">Some things I've done, somehow.</span>
-		<ul>
-			<li>
-				🎮 Competed in 1 game jam with a game called <a href="https://grayvox.itch.io/noirdo" rel="noopener noreferrer">Noirdo</a>.
-			</li>
-			<li>
-				📋 Created a <a href=`${LINKS.github}/rails-alternatives` rel="noopener noreferrer">simple repo</a> for alternatives to Ruby on Rails.
-			</li>
-			<li>
-				🎰 Built a total of 3 different Discord Bots (Only 1 has a <a href=`${LINKS.github}/on-this-day-bot` rel="noopener noreferrer">public repo</a> though).
-			</li>
-		</ul>
-	</div>
-</Layout>
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={title} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1 class="title center-text">About Me</h1>
+			<br>
+			<p>
+				Home page wasn't enough for you? Honestly I'm glad you're here regardless, because SOMEONE has to read 
+				this or it was all for nothing. 😭
+			</p>
+			<p>
+				Anyway... greetings, wanderer of the interwebs. My name is Gray, short for Grayvox. 
+				That's not my real name of course, as I prefer some sense of privacy on the interwebs.
+			</p>
+			<p>
+				I'm currently helping build <a href="https://stable.dev" rel="noopener noreferrer">stable.dev</a>, a startup 
+				focused on giving developers the ability to just push their code to GitHub and have their bot up and running thanks to our easy
+				and effective hosting solutions.
+			</p>
+			<p>
+				Most of my projects are freely accessible on my <a href={LINKS.github} rel="noopener noreferrer">GitHub</a>, except for my games
+				which I prefer to keep private. I do have <a href=`${LINKS.github}/godot-fcc-game` rel="noopener noreferrer">one game</a> publicly 
+				available though, which is the first one I
+				ever made with Godot.
+			</p>
+			<p>
+				Now onto the organized part! Below you'll find a list of the tech I've used, interests I have (fields of 
+				expertise?), and life achievements I've unlocked (somehow).
+			</p>
+			<p>
+				Naturally, we're going to divide this into multipoint lists and special boxes with super cool 
+				<code>box-shadow</code> properties tied to them for as much dramatic effect as possible.
+			</p>
+			<p>
+				Ready, dear traveller? LET'S A GO! *Mario pipe noises*
+			</p>
+			<div class="special-box">
+				<h3>Technologies</h3>
+				<h5>Languages</h5>
+				<a href="https://developer.mozilla.org/en-US/docs/Web/HTML" rel="noopener noreferrer"><img src="https://skillicons.dev/icons?i=html" /></a>
+				<a href="https://developer.mozilla.org/en-US/docs/Web/CSS" rel="noopener noreferrer"><img src="https://skillicons.dev/icons?i=css" /></a>
+				<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" rel="noopener noreferrer"><img src="https://skillicons.dev/icons?i=js" /></a>
+				<a href="https://typescriptlang.org" rel="noopener noreferrer"><img src="https://skillicons.dev/icons?i=ts" /></a>
+				<a href="https://ruby-lang.org" rel="noopener noreferrer"><img src="https://skillicons.dev/icons?i=ruby" /></a>
+				<a href="https://java.com" rel="noopener noreferrer"><img src="https://skillicons.dev/icons?i=java" /></a>
+				<a href="https://en.wikipedia.org/wiki/C_(programming_language)" rel="noopener noreferrer"><img src="https://skillicons.dev/icons?i=c" /></a>
+				<h5>Frontend</h5>
+				<a href="https://astro.build" rel="noopener noreferrer"><img src="https://skillicons.dev/icons?i=astro" /></a>
+				<a href="https://tailwindcss.com" rel="noopener noreferrer"><img src="https://skillicons.dev/icons?i=tailwind" /></a>
+				<a href="https://vite.dev" rel="noopener noreferrer"><img src="https://skillicons.dev/icons?i=vite" /></a>
+				<h5>Backend</h5>
+				<a href="https:/nodejs.org" rel="noopener noreferrer"><img src="https://skillicons.dev/icons?i=nodejs" /></a>
+				<a href="https://bun.sh" rel="noopener noreferrer"><img src="https://skillicons.dev/icons?i=bun" /></a>
+				<h5>Game Dev</h5>
+				<a href="https://godotengine.org" rel="noopener noreferrer"><img src="https://skillicons.dev/icons?i=godot" /></a>
+			</div>
+			<br>
+			<div class="special-box">
+				<h3>Interests</h3>
+				<span class="mini-text">(Outside of programming, that is.)</span>
+				<ul>
+					<li>
+						📽️ Film and TV (I have a few <i>minor</i> favorites)
+					</li>
+					<li>
+						🕹️ Video games (THE <b>LORE</b> CONSUMES ME)
+					</li>
+					<li>
+						🪶 Books (Reading, writing, smelling... I like the smell of books)
+					</li>
+					<li>
+						🎨 Art (Why can't reality have an undo tool)
+					</li>
+					<li>
+						💽 Hardware engineering (Oooh what does this button do-)
+					</li>
+					<li>
+						🏛️ Architecture (I yearn for the mines)
+					</li>
+					<li>
+						🪩 3D modeling (Look mom, I made a cube)
+					</li>
+					<li>
+						🎸 Guitar (...and music in general)
+					</li>
+				</ul>
+			</div>
+			<br>
+			<div class="special-box">
+				<h3>Achievements</h3>
+				<span class="mini-text">Some things I've done, somehow.</span>
+				<ul>
+					<li>
+						🎮 Competed in 1 game jam with a game called <a href="https://grayvox.itch.io/noirdo" rel="noopener noreferrer">Noirdo</a>.
+					</li>
+					<li>
+						📋 Created a <a href=`${LINKS.github}/rails-alternatives` rel="noopener noreferrer">simple repo</a> for alternatives to Ruby on Rails.
+					</li>
+					<li>
+						🎰 Built a total of 3 different Discord Bots (Only 1 has a <a href=`${LINKS.github}/on-this-day-bot` rel="noopener noreferrer">public repo</a> though).
+					</li>
+				</ul>
+			</div>
+		</main>
+		<Footer />
+	</body>
+</html>
