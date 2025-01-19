@@ -6,5 +6,5 @@ export const LINKS = {
     twitch: 'https://www.twitch.tv/grayvoxdev',
     github: 'https://www.github.com/Grayvox',
     kofi: 'https://www.ko-fi.com/grayvox',
-    linktree: 'https://www.linktr.ee/grayvox'
+    links: 'https://www.bento.me/grayvox'
 };
