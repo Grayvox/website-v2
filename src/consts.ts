@@ -5,6 +5,6 @@ export const LINKS = {
     youtube: 'https://www.youtube.com/@Grayvox',
     twitch: 'https://www.twitch.tv/grayvoxdev',
     github: 'https://www.github.com/Grayvox',
-    kofi: 'https://www.ko-fi.com/grayvox',
+    discord: 'https://discord.gg/MamqRf9M',
     links: 'https://www.bento.me/grayvox'
 };

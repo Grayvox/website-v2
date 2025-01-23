@@ -10,29 +10,6 @@ const today = new Date();
 		width: 48px;
 		height: 48px;
 	}
-</style>
-
-<footer>
-	&copy; {today.getFullYear()} Grayvox. All rights reserved.
-	<div class="social-links">
-		<a href={LINKS.youtube} target="_blank" rel="noopener noreferrer">
-			<Icon name="mdi:youtube" />
-		</a>
-		<a href={LINKS.twitch} target="_blank" rel="noopener noreferrer">
-			<Icon name="mdi:twitch" />
-		<a href={LINKS.github} target="_blank" rel="noopener noreferrer">
-			<Icon name="mdi:github" />
-		</a>
-		<a href={LINKS.kofi} target="_blank" rel="noopener noreferrer">
-			<Icon name="mdi:coffee" />
-		</a>
-		<a href={LINKS.links} target="_blank" rel="noopener noreferrer">
-			<Icon name="mdi:link" />
-		</a>
-	</div>
-	<img src="/scribbles/FindMe.png" alt="Find me elsewhere" style="margin-left: 2rem;">
-</footer>
-<style>
 	footer {
 		padding: 2em 1em 6em 1em;
 		background: var(--bg);
@@ -53,3 +30,24 @@ const today = new Date();
 		color: rgb(var(--hover));
 	}
 </style>
+
+<footer>
+	&copy; {today.getFullYear()} Grayvox. All rights reserved.
+	<div class="social-links">
+		<a href={LINKS.youtube} target="_blank" rel="noopener noreferrer">
+			<Icon name="mdi:youtube" />
+		</a>
+		<a href={LINKS.twitch} target="_blank" rel="noopener noreferrer">
+			<Icon name="mdi:twitch" />
+		<a href={LINKS.github} target="_blank" rel="noopener noreferrer">
+			<Icon name="mdi:github" />
+		</a>
+		<a href={LINKS.discord} target="_blank" rel="noopener noreferrer">
+			<Icon name="ic:baseline-discord" />
+		</a>
+		<a href={LINKS.links} target="_blank" rel="noopener noreferrer">
+			<Icon name="mdi:link" />
+		</a>
+	</div>
+	<img src="/scribbles/FindMe.png" alt="Find me elsewhere" style="margin-left: 2rem;">
+</footer>
