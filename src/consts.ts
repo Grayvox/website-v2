@@ -6,5 +6,6 @@ export const LINKS = {
     twitch: 'https://www.twitch.tv/grayvoxdev',
     github: 'https://www.github.com/Grayvox',
     discord: 'https://discord.gg/cX5UGfpexf',
+    itch: 'https://grayvox.itch.io',
     links: 'https://www.bento.me/grayvox'
 };
