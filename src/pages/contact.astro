@@ -1,0 +1,41 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import { SITE_TITLE, SITE_DESCRIPTION, LINKS } from "../consts";
+
+const title = `How to Contact Me - ${SITE_TITLE}`;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={title} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+        <main>
+            <h3 class="center-text">🌐 <span>Contact</span> 🌐</h3>
+            <br>
+            <div class="special-box">
+                <h5>Software Commissions</h5>
+                <p>
+                    I'm currently not open to commissions at this time. Check back soon!
+                </p>
+                <h5>Forms of Contact</h5>
+                <ul>
+                    <li>
+                        Personal Email <b>→</b> <a href="mailto:gray@grayvox.dev">gray@grayvox.dev</a>
+                    </li>
+                    <li>
+                        Business Inquiries <b>→</b> <a href="mailto:business@grayvox.dev">business@grayvox.dev</a>
+                    </li>
+                    <li>
+                        Discord <b>→</b> <a href="https://discord.com/users/1263900642741583923">grayvoxdev</a> (or <a href=`${LINKS.discord}`>join my server</a> if my user doesn't work)
+                    </li>
+                </ul>
+            </div>
+        </main>
+		<Footer />
+	</body>
+</html>
