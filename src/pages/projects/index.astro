@@ -1,0 +1,65 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
+
+const title = `Projects by ${SITE_TITLE}`
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={title} description={SITE_DESCRIPTION} />
+		<style>
+			main {
+				width: 960px;
+			}
+			main h3 span {
+				text-shadow: 3px 3px 10px black;
+			}
+			ul, li {
+				margin-top: 0px;
+			}
+			ul li {
+				display: flex;
+				width: 100%;
+			}
+			ul li * {
+				text-decoration: none;
+				transition: 0.2s ease;
+			}
+			ul li a {
+				display: block;
+			}
+			h4 {
+				margin-top: 20px;
+			}
+            .project-img {
+    			display: block;
+    			margin-left: auto;
+    			margin-right: auto;
+    			width: 100%;
+    			max-height: 200px;
+    			object-fit: cover;
+    			overflow: hidden;
+			}	
+			.bottom-img {
+				margin-left: 50rem;
+			}
+		</style>
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h3 class="center-text">⛏️ <span>Projects</span> ⛏️</h3>
+			<section>
+				<ul>
+					<li>Test</li>
+				</ul>
+				<img class="bottom-img" src="/scribbles/FoundTheEnd.png" alt="Welp, found the end. Congrats!">
+			</section>
+		</main>
+		<Footer />
+	</body>
+</html>
