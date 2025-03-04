@@ -1,23 +1,38 @@
 ---
-import { LINKS } from '../consts'
+const roles = [
+    '🎓 Self Taught Programmer',
+    '🌐 Web Dev',
+    '👾 Game Dev',
+    '💻 Front End Dev',
+    '💾 Back End Dev',
+    '🪶 Writer',
+    '🎨 Artist',
+    '🤓 Nerd',
+    '🎥 YouTube Person',
+    '🎙️ Twitch Person',
+    '💙 VS Code btw',
+]
 ---
 
-<div id="roles" class="special-box">
-    <img src="/Sunglasses.png" width="64" alt="">
+<style>
+    #roles-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+</style>
+
+<div class="special-box">
+    <img src="/Sunglasses.png" width="64" alt="Profile picture">
     <h5>Grayvox <span class="mini-text">he/him</span></h5>
     <p>
         <i>User joined on XXX, XX, XXXX.</i>
     </p>
-    <code>💾 Self Taught Programmer</code>
-    <code>🌐 Web Dev</code>
-    <code>👾 Game Dev</code>
-    <br>
-    <code>💽 Systems Programming</code>
-    <code>🪶 Writer</code>
-    <code>🎨 Artist</code>
-    <br>
-    <code>🤓 Nerd</code>
-    <code>🎥 <a href={LINKS.youtube} target="_blank" rel="noopener noreferrer">YouTube Person</a></code>
-    <code>🎙️ <a href={LINKS.twitch} target="_blank" rel="noopener noreferrer">Twitch Person</a></code>
-    <code>💙 VS Code btw</code>
+    <div id="roles-list">
+        {roles.map(role => (
+            <div>
+                <code>{role}</code>
+            </div>
+        ))}
+    </div>
 </div>

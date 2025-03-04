@@ -3,9 +3,6 @@ import BaseHead from '../../components/BaseHead.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
-import { getCollection } from 'astro:content';
-
-const posts = (await getCollection('projects'));
 
 const title = `Projects by ${SITE_TITLE}`
 ---
@@ -58,19 +55,7 @@ const title = `Projects by ${SITE_TITLE}`
 			<h3 class="center-text">⛏️ <span>Projects</span> ⛏️</h3>
 			<section>
 				<ul>
-					{
-						posts.map((post) => (
-							<li>
-								<a href={`/projects/${post.slug}/`} class="special-box post">
-									<div>
-										<img class="project-img" src={post.data.image.src} alt={post.data.image.alt}>
-										<h4><b>{post.data.title}</b></h4>
-									</div>
-									<p>{post.data.description}</p>
-								</a>
-							</li>
-						))
-					}
+					<li>Test</li>
 				</ul>
 				<img class="bottom-img" src="/scribbles/FoundTheEnd.png" alt="Welp, found the end. Congrats!">
 			</section>
