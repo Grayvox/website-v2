@@ -1,4 +1,6 @@
 ---
+import Card from "./Card.astro"
+
 const roles = [
     '🎓 Self Taught Programmer',
     '🌐 Web Dev',
@@ -22,7 +24,7 @@ const roles = [
     }
 </style>
 
-<div class="special-box">
+<Card>
     <img src="/Sunglasses.png" width="64" alt="Profile picture">
     <h5>Grayvox <span class="mini-text">he/him</span></h5>
     <p>
@@ -35,4 +37,4 @@ const roles = [
             </div>
         ))}
     </div>
-</div>
+</Card>

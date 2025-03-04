@@ -35,13 +35,6 @@
 .post {
 	width: 100%;
 	margin: 2%;
-	padding: 1rem;
-	color: var(--text);
-	line-height: 1;
-	border: solid var(--blend-text) 3px;
-	box-shadow: 3px 3px 15px black;
-	background-color: var(--bg-dark);
-	border-radius: 10px;
 }
 .prose h3 {
 	margin: 5rem 0 2rem 0;

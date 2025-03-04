@@ -1,0 +1,39 @@
+---
+import FormattedDate from "./FormattedDate.astro";
+
+const { slug, title, date, description } = Astro.props;
+---
+
+<style>
+	li {
+		margin-top: 0px;
+	}
+
+	li {
+		display: flex;
+		width: 100%;
+	}
+
+	li * {
+		text-decoration: none;
+		transition: 0.2s ease;
+	}
+
+	li a {
+		display: block;
+	}
+
+	li a p {
+		margin-bottom: 10px;
+	}
+</style>
+
+<li>
+    <a href={`/blog/${slug}/`} class="special-box post">
+        <div>
+            <h4><b>{title}</b></h4>
+            <p class="date"><i>🪶 Committed to writing <b><FormattedDate date={date} /></b></i></p>
+        </div>
+        <p>{description}</p>
+    </a>
+</li>

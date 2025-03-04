@@ -5,6 +5,7 @@ import Footer from '../../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
 import { getCollection } from 'astro:content';
 import FormattedDate from '../../components/FormattedDate.astro';
+import PostCard from '../../components/PostCard.astro';
 
 const posts = (await getCollection('blog')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
@@ -21,22 +22,8 @@ const title = `Writings by ${SITE_TITLE}`
 			main {
 				width: 960px;
 			}
-			ul, li {
+			ul {
 				margin-top: 0px;
-			}
-			ul li {
-				display: flex;
-				width: 100%;
-			}
-			ul li * {
-				text-decoration: none;
-				transition: 0.2s ease;
-			}
-			ul li a {
-				display: block;
-			}
-			ul li a p {
-				margin-bottom: 10px;
 			}
 			.top-img {
 				margin-left: 2rem;
@@ -55,15 +42,12 @@ const title = `Writings by ${SITE_TITLE}`
 				<ul>
 					{
 						posts.map((post) => (
-							<li>
-								<a href={`/blog/${post.slug}/`} class="post">
-									<div>
-										<h4><b>{post.data.title}</b></h4>
-										<p class="date"><i>🪶 Committed to writing <b><FormattedDate date={post.data.pubDate} /></b></i></p>
-									</div>
-									<p>{post.data.description}</p>
-								</a>
-							</li>
+							<PostCard 
+								slug={post.slug} 
+								title={post.data.title} 
+								date={post.data.pubDate} 
+								description={post.data.description} 
+							/>
 						))
 					}
 				</ul>

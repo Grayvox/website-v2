@@ -1,0 +1,174 @@
+---
+import { Image } from 'astro:assets';
+import { Icon } from 'astro-icon/components';
+
+import BaseHead from '../../components/BaseHead.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import Card from '../../components/Card.astro';
+
+import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
+
+const title = `${SITE_TITLE}'s Projects`
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={title} description={SITE_DESCRIPTION} />
+		<style>
+			[data-icon] {
+				width: 48px;
+				height: 48px;
+				margin-right: 5px;
+			}
+
+			main {
+				width: 960px;
+			}
+
+			main h3 span {
+				text-shadow: 3px 3px 10px black;
+			}
+
+			ul {
+				list-style-type: none;
+			}
+
+			li {
+				margin-bottom: 48px;
+			}
+
+			li * {
+				text-decoration: none;
+				transition: 0.2s ease;
+			}
+
+			ul, li {
+				margin-top: 0px;
+			}
+
+			ul li {
+				text-decoration: none;
+				transition: 0.2s ease;
+			}
+
+			ul li a {
+				display: block;
+			}
+
+			h4 {
+				margin-top: 20px;
+			}
+
+			p {
+				line-height: 2rem;
+			}
+
+			#title {
+				margin-bottom: 103px;
+			}
+
+			.links {
+				display: flex;
+				justify-content: flex-end;
+			}
+
+			.scribble {
+				width: auto;
+				height: 50px;
+			}
+
+			@media (max-width: 40rem) {
+				.scribble {
+					display: none;
+				}
+			}
+
+            .project-img {
+    			display: block;
+    			margin-left: auto;
+    			margin-right: auto;
+				margin-bottom: 10px;
+    			width: 100%;
+    			height: 200px;
+    			object-fit: cover;
+    			overflow: hidden;
+			}	
+
+			.bottom-img {
+				margin-left: 50rem;
+			}
+
+			.special-box {
+				margin: 18px;
+			}
+		</style>
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h3 id="title" class="center-text">⛏️ <span>Projects</span> ⛏️</h3>
+			<div>
+				<ul>
+					<li>
+						<Card>
+							<Image class="project-img" src="/Sunglasses.png" alt="Sunglasses" width="100" height="200" />
+							<h3>Test</h3>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							</p>
+							<div class="links">
+								<img class="scribble" src="/scribbles/ProjectLinks.png" alt="Check out the project" />
+								<a href="" target="_blank" rel="noopener noreferrer">
+									<Icon name="mdi:web" />
+								</a>
+								<a href="" target="_blank" rel="noopener noreferrer">
+									<Icon name="mdi:github" />
+								</a>
+							</div>
+						</Card>
+					</li>
+					<li>
+						<Card>
+							<Image class="project-img" src="/Sunglasses.png" alt="Sunglasses" width="100" height="200" />
+							<h3>Test</h3>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							</p>
+							<div class="links">
+								<img class="scribble" src="/scribbles/ProjectLinks.png" alt="Check out the project" />
+								<a href="" target="_blank" rel="noopener noreferrer">
+									<Icon name="mdi:web" />
+								</a>
+								<a href="" target="_blank" rel="noopener noreferrer">
+									<Icon name="mdi:github" />
+								</a>
+							</div>
+						</Card>
+					</li>
+					<li>
+						<Card>
+							<Image class="project-img" src="/Sunglasses.png" alt="Sunglasses" width="100" height="200" />
+							<h3>Test</h3>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							</p>
+							<div class="links">
+								<img class="scribble" src="/scribbles/ProjectLinks.png" alt="Check out the project" />
+								<a href="" target="_blank" rel="noopener noreferrer">
+									<Icon name="mdi:web" />
+								</a>
+								<a href="" target="_blank" rel="noopener noreferrer">
+									<Icon name="mdi:github" />
+								</a>
+							</div>
+						</Card>
+					</li>
+				</ul>
+			</div>
+			<img class="bottom-img" src="/scribbles/FoundTheEnd.png" alt="Welp, found the end. Congrats!">
+		</main>
+		<Footer />
+	</body>
+</html>
