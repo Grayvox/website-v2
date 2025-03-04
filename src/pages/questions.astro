@@ -1,0 +1,197 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+
+const title = `A Brief Interrogation of ${SITE_TITLE}`
+---
+
+<!doctype HTML>
+<html>
+    <head>
+        <BaseHead title={title} description={SITE_DESCRIPTION} />
+        <style>
+            main {
+				width: 960px;
+			}
+			main h3 span {
+				text-shadow: 3px 3px 10px black;
+			}
+            ul, li {
+				margin-top: 0px;
+			}
+			ul li {
+                list-style-type: none;
+			}
+			ul li p {
+                line-height: 30px;
+				margin-bottom: 10px;
+			}
+            .inner-list li {
+                margin-top: 10px;
+                margin-bottom: 0px;
+                list-style-type: disc;
+            }
+        </style>
+    </head>
+    <body>
+        <Header />
+        <main>
+            <ul>
+                <div class="special-box">
+                    <h3 class="center-text">🗂️ <i>A Brief Interrogation of Grayvox</i> 🗂️</h3>
+                    <br>
+                    <li id="question-one">
+                        <h4>What's with the name?</h4>
+                        <p>
+                            I always wanted my username to involve 'Gray' or at least a wolf. After a ton of brainstorming, I came up with this.
+                        </p>
+                        <br>
+                        Other name ideas were:
+                        <ul class="inner-list">
+                            <li>HowlingGray</li>
+                            <li>SystemGray</li>
+                            <li>VoxelWolf</li>
+                            <li>GraySystems</li>
+                            <li>DevByGray</li>
+                        </ul>
+                        <br>
+                        Still hate that last one...
+                    </li>
+                    <li id="question-two">
+                        <h4>Why a wolf?</h4>
+                        <p>
+                            I could be cheesy and say it's because they're "misunderstood", but I like being original.
+                            Put simply, I love wolves. Beautiful, intelligent, a bit scary... and yes, misunderstood.
+                            Though I do have a lot in common with them; They're extremely social creatures (unlike me), 
+                            do well in packs (unlike me)... wait a minute-
+                        </p>
+                    </li>
+                    <li id="question-three">
+                        <h4>What sort of work do you do?</h4>
+                        <p>
+                            Yes.
+                        </p>
+                        <p>
+                            ...A lot of stuff, put simply. Whatever comes to mind, whatever I fancy at the time. 
+                            I code stuff, write stories, draw stuff, design games, produce ideas upon ideas upon ideas 
+                            upon... well, you get the idea.
+                        </p>
+                    </li>
+                    <!-- 
+                        <li><b>CPU:</b> Intel i7-13700K</li>
+                        <li><b>GPU:</b> GeForce RTX 3060 12GB</li>
+                        <li><b>RAM:</b> 32GB DDR5</li>
+                        <li><b>Hard Drive 1:</b> Samsung 990 EVO 1TB SSD</li>
+                        <li><b>Motherboard:</b> MSI Z790-A PRO MAX WIFI</li>
+                    -->
+                    <li id="question-four">
+                        <h4>What are you working on right now?</h4>
+                        <p>
+                            Whatever my brain decides made sense. I try to keep that up to date on my <a href="/#status">
+                            Status</a> though.
+                        </p>
+                    </li>
+                    <li id="question-five">
+                        <h4>Favorite programming language?</h4>
+                        <p>
+                            Every language is a tool, each with it's own uses, pros and cons. So I don't have a favorite yet.
+                        </p>
+                        <p>
+                            ...But don't worry, if I did, it wouldn't be Java. <i>*shudders*</i>
+                        </p>
+                    </li>
+                    <li id="question-six">
+                        <h4>Favorite game?</h4>
+                        <p>You think I can name just one? Fool. Here is a list I wrote simply because.</p>
+                        <ul>
+                            <li>⛏️ Minecraft</li>
+                            <li>👻 Phasmophobia</li>
+                            <li>🎥 Content Warning</li>
+                            <li>💀 Undertale</li>
+                            <li>💜 Heartbound 💛</li>
+                            <li>🔍 Tangle Tower</li>
+                            <li>👁️ OMORI</li>
+                            <li>🐤 Stardew Valley</li>
+                            <li>☢️ Lethal Company</li>
+                            <li>🏔️ Celeste</li>
+                        </ul>
+                        <p>Of course, that's subject to change over time as I will never stop playing games.</p>
+                    </li>
+                    <li id="question-seven">
+                        <h4>Favorite TV show?</h4>
+                        <p>...I just said earlier- Fine. Use another singular. But I will stick to my lists.</p>
+                        <ul>
+                            <li>❤️‍🩹 Arcane</li>
+                            <li>🌲 Gravity Falls</li>
+                            <li>🦉 The Owl House</li>
+                            <li>🥬 Avatar: The Last Airbender</li>
+                            <li>🪦 Lockwood and Co... <i>*sobbing*</i> GIVE IT BACK, NETFLIX-</li>
+                            <li>🧙‍♂️ Merlin</li>
+                            <li>🕵️‍♂️ Sherlock</li>
+                            <li>🐕 Bluey</li>
+                            <li>⚔️ She-Ra and the Princesses of Power (Netflix)</li>
+                            <li>🦁 Voltron (Netflix)</li>
+                        </ul>
+                    </li>
+                    <li id="question-eight">
+                        <h4>Favorite movie?</h4>
+                        <p>...You really don't learn do you...</p>
+                        <ul>
+                            <li>🕷️ Spider Man: Across the Spider-Verse</li>
+                            <li>🛰️ Interstellar</li>
+                            <li>📜 National Treasure</li>
+                            <li>👰 The Princess Bride</li>
+                            <li>✉️ Klaus</li>
+                            <li>🤖 Wall-E</li>
+                            <li>🐹 Bolt</li>
+                            <li>🐉 How to Train Your Dragon</li>
+                            <li>🫏 Shrek</li>
+                            <li>🍳 Tangled*</li>
+                        </ul>
+                        <span class="mini-text">*I was forced into putting that on here. You know who you are.</span>
+                    </li>
+                    <li id="question-nine">
+                        <h4>...Favorite book?</h4>
+                        <p>. . . <b>You-</b> Fine. Just take the list.</p>
+                        <ul>
+                            <li>🎭 The Phantom of the Opera</li>
+                            <li>🤕 Unwind</li>
+                            <li>🏹 The Hunger Games</li>
+                            <li>🔱 Percy Jackson and the Olympians</li>
+                            <li>🏺 Heroes of Olympus</li>
+                            <li>👴🏻 The Giver</li>
+                            <li>🪦 Lockwood and Co (...yes, again)</li>
+                            <li>🌫️ Mistborn</li>
+                            <li>💍 The Lord of the Rings</li>
+                            <li>⛰️ The Hobbit</li>
+                        </ul>
+                    </li>
+                    <li id="question-ten">
+                        <h4>Do you enjoy long walks on the beach?</h4>
+                        <p>
+                            ...Yes? I do? Actually I love the beach, and the mountains, but scenic walks on the beach 
+                            are like no other, really. Especially when you're right at the water's edge, and the waves 
+                            hit your feet- . . . oh wait, now I know what this is about-
+                        </p>
+                    </li>
+                    <li id="question-eleven">
+                        <h4>And how rich are you?</h4>
+                        <p>...Oh I see how it is.</p>
+                        <p>
+                            Well rich enough, thank you. I can live in a cave with what would barely pass as WiFi, 
+                            thank you very much.
+                        </p>
+                    </li>
+                    <li id="question-twelve">
+                        <h4>Are you actually a wolf?</h4>
+                        <p>...This Q&A session is over. <i>*runs*</i></p>
+                    </li>
+                </div>
+            </ul>
+        </main>
+        <Footer />
+    </body>
+</html>
+
