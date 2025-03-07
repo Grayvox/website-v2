@@ -9,7 +9,6 @@ import PostCard from '../../components/PostCard.astro';
 
 const posts = (await getCollection('blog')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
-	// Will fix up later
 );
 
 const title = `Writings by ${SITE_TITLE}`
@@ -30,7 +29,7 @@ const title = `Writings by ${SITE_TITLE}`
 				margin-left: 2rem;
 			}
 			.bottom-img {
-				margin-left: 50rem;
+				margin-left: 50%;
 			}
 		</style>
 	</head>

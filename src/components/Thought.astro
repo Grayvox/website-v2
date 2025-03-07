@@ -1,0 +1,49 @@
+---
+import type { CollectionEntry } from "astro:content";
+import Card from "./Card.astro";
+import FormattedDate from "./FormattedDate.astro";
+
+interface Props {
+  post: CollectionEntry<'thoughts'>;
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+---
+
+<style>
+    #info {
+        display: flex;
+    }
+
+    #info div {
+        padding-left: 15px;
+    }
+
+    #info p {
+        margin: 0px;
+    }
+    
+    #content {
+        line-height: 1.3;
+    }
+
+    img {
+        width: 64px; 
+        height: 64px;
+    }
+</style>
+
+<Card>
+    <div id="info">
+        <img src="/Sunglasses.png" alt="Profile picture" />
+        <div>
+            <h5>Grayvox</h5>
+            <p class="mini-text">@grayvox</p>
+        </div>
+    </div>
+    <div id="content">
+        <Content />
+    </div>
+    <p class="mini-text">Thought posted on <FormattedDate date={post.data.date}/></p>
+</Card>

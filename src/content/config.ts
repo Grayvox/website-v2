@@ -10,4 +10,11 @@ const blog = defineCollection({
 	}),
 });
 
-export const collections = { blog };
+const thoughts = defineCollection({
+	type: 'content',
+	schema: z.object({
+		date: z.coerce.date()
+	}),
+});
+
+export const collections = { blog, thoughts };
