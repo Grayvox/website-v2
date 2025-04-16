@@ -8,6 +8,7 @@ import Footer from '../../components/Footer.astro';
 import Card from '../../components/Card.astro';
 
 import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
+import Project from '../../components/Project.astro';
 
 const title = `${SITE_TITLE}'s Projects`
 ---
@@ -113,58 +114,89 @@ const title = `${SITE_TITLE}'s Projects`
 			<div>
 				<ul>
 					<li>
-						<Card>
-							<Image class="project-img" src="/Sunglasses.png" alt="Sunglasses" width="100" height="200" />
-							<h3>Test</h3>
-							<p>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-							</p>
-							<div class="links">
-								<img class="scribble" src="/scribbles/ProjectLinks.png" alt="Check out the project" />
-								<a href="" target="_blank" rel="noopener noreferrer">
-									<Icon name="mdi:web" />
-								</a>
-								<a href="" target="_blank" rel="noopener noreferrer">
-									<Icon name="mdi:github" />
-								</a>
-							</div>
-						</Card>
+						<Project 
+							name="Character Sheets"
+							src="/projects/CharacterSheets.png" 
+							alt="A demo image of the minimal process to using the Character Sheets plugin"
+							github="https://github.com/Grayvox/obsidian-character-sheets"
+						>
+							Have you ever wanted to streamline the creation of characters for a novel, TTRPG, game concept, 
+							film, or any other form of storytelling? I sure have! And now I can satisfy my visions of 
+							tormenting my characters with the power of Obsidian - using the Character Sheets plugin! Using
+							this simple plugin, you can quickly generate a new character sheet with presets depending on
+							your case, and customize it to your heart's content!	
+						</Project>
 					</li>
 					<li>
-						<Card>
-							<Image class="project-img" src="/Sunglasses.png" alt="Sunglasses" width="100" height="200" />
-							<h3>Test</h3>
-							<p>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-							</p>
-							<div class="links">
-								<img class="scribble" src="/scribbles/ProjectLinks.png" alt="Check out the project" />
-								<a href="" target="_blank" rel="noopener noreferrer">
-									<Icon name="mdi:web" />
-								</a>
-								<a href="" target="_blank" rel="noopener noreferrer">
-									<Icon name="mdi:github" />
-								</a>
-							</div>
-						</Card>
+						<Project 
+							name="Dawg"
+							src="/projects/Dawg.png" 
+							alt="A demo image of Dawg in action"
+							github="https://github.com/Grayvox/dawg"
+						>
+							Dawg is a lot of things that I can't seem to decide on - but the best way to say for now is that
+							it's an easy to use Discord bot that allows me to streamline the process of managing my Discord
+							server - from fancy embeds for my stream schedule, to commands to provide info on my current
+							projects, Dawg has it all! ...And is being updated regularly when my brain comes up with something
+							else to work on...
+						</Project>
 					</li>
 					<li>
-						<Card>
-							<Image class="project-img" src="/Sunglasses.png" alt="Sunglasses" width="100" height="200" />
-							<h3>Test</h3>
-							<p>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-							</p>
-							<div class="links">
-								<img class="scribble" src="/scribbles/ProjectLinks.png" alt="Check out the project" />
-								<a href="" target="_blank" rel="noopener noreferrer">
-									<Icon name="mdi:web" />
-								</a>
-								<a href="" target="_blank" rel="noopener noreferrer">
-									<Icon name="mdi:github" />
-								</a>
-							</div>
-						</Card>
+						<Project 
+							name="They Are Unworthy"
+							src="/projects/TheyAreUnworthy.png" 
+							alt="They Are Unworthy logo"
+							itch="https://grayvox.itch.io/they-are-unworthy"
+						>
+							You are the final say. The judge, if you will. The one who decides who on death row deserves life 
+							or not. As designated by the Supervisors, you enter your room of judgement, read the reason that 
+							the prisoner behind the window is on death row, and use the terminal before you to decide their fate. 
+							Though not everything is as it seems… you know the Supervisors can be harsh, and that everyone has a 
+							story.  But if you take too long, the Supervisors will take notice and make the decision before you 
+							can...  and of course, lower your approval rating with it.
+							<br>
+							<br>
+							Will you decide if they are worthy of living, or not?
+							<br>
+							<br>
+							<i>Built for the 16th Pirate Software Game Jam, with help from GTortle and Perny</i>
+						</Project>
+					</li>
+					<li>
+						<Project 
+							name="Noirdo"
+							src="/projects/Noirdo.png" 
+							alt="Noirdo logo"
+							itch="https://grayvox.itch.io/noirdo"
+						>
+							In a dark, heavily guarded castle, specially trained alchemists known as Shadow Benders house hundreds 
+							of shadow creatures known as noirdos in cages. The noirdos are used to make powerful potions to fight 
+							in the coming war… but one Noirdo is determined to escape before he meets this fate.	
+							<br>
+							<br>
+							<i>Built for the 15th Pirate Software Game Jam, with help from GTortle</i>
+						</Project>
+					</li>
+					<li>
+						<Project 
+							name="Hangman"
+							src="/projects/Hangman.png" 
+							alt="A demo image of the minimal process to using the Character Sheets plugin"
+							github="https://github.com/Grayvox/hangman"
+						>
+							A recreation of the word solving game, Hangman. Uses serialization to save and load game files 
+							as the user wishes. Written in Ruby and for the command line.
+						</Project>
+					</li>
+					<li>
+						<Project 
+							name="Mastermind"
+							src="/projects/Mastermind.png" 
+							alt="A demo image of the minimal process to using the Character Sheets plugin"
+							github="https://github.com/Grayvox/mastermind"
+						>
+							A recreation of the code breaking game, Mastermind, written in Ruby and for the command line.
+						</Project>
 					</li>
 				</ul>
 			</div>
